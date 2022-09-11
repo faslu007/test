@@ -109,6 +109,7 @@ const loginUser = asyncHandler( async (req, res) =>{
 // @Get Users Data
 // @Route Get api/users/me
 // @access Private
+    // need review: Individual Providers/Healthstaff name not passing to the user only the id
 const getMe = asyncHandler( async (req, res) =>{
     const {_id, name, email, role, account, subUsers } = await User.findById(req.user.id).populate('account', { _id: 1, name: 1, type: 1, providers: 1, }).populate('subUsers', {_id: 1, name: 1});
 
