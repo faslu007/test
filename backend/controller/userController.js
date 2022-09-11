@@ -46,6 +46,9 @@ const registerSuperAdmin = asyncHandler( async (req, res) =>{
 })
 
 
+// @Register User
+// @Route POST api/users/verifyOTP
+// @access Public
 const verifyOTP = asyncHandler ( async (req, res) =>{
     const {name, email, otp} = req.body;
     // form validation
