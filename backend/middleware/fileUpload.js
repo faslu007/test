@@ -95,8 +95,8 @@ const url = process.env.MONGO_URI;
   };
 
   
-  // need to do user privilege validation
 // middleware to send files back to the Users
+  // need to do user privilege validation
 const getUploadedFile = async ({ params: { id } }, res) => {
       // if no id return error
     if (!id || id === 'undefined') return res.status(400).send('no file id');
