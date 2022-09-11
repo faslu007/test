@@ -13,7 +13,7 @@ let transporter = nodemailer.createTransport({
   });
 
 
-// async function to send the OTP verification - this is called from the controller/userController.js - registerSuperAmdin
+// async function to send the OTP verification - this is called from the controller/userController.js - registerSuperAmdin()
 const sendOTP = async (tempUser, res) => {
     try {
     const OTP = Math.floor(Math.random() * 90000) + 10000;
